@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin generate($prefix, $properties) {
   // List of sizes to generate for each
   $sizes: (0.5, 1, 1.5, 2, 2.5, 3);
@@ -88,6 +90,21 @@
   @if $breakpoint == big-desktop {
     @media only screen and (min-width: 1800px) {
       @content;
+    }
+  }
+}
+
+@function pxToRem($pxSize) {
+  @return math.div($pxSize, 10) + rem;
+}
+
+@mixin font-size() {
+  $font-size-list: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+    24;
+
+  @each $value in $font-size-list {
+    .fs-#{$value} {
+      font-size: pxToRem($value);
     }
   }
 }
