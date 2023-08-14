@@ -1,0 +1,9 @@
+.udv-control {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  &:hover {
+    cursor: grab;
+  }
+}

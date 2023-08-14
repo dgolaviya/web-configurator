@@ -1,0 +1,107 @@
+{
+  "udvId": "MFI_2",
+  "udvDef": {
+    "ROOT": {
+      "type": { "resolvedName": "Container" },
+      "isCanvas": true,
+      "props": {
+        "width": "100%",
+        "height": "600px",
+        "flex": "none",
+        "flexDirection": "column",
+        "alignItems": "none",
+        "justifyContent": "none",
+        "border": "1px solid #ccc"
+      },
+      "displayName": "Container",
+      "custom": {},
+      "hidden": false,
+      "nodes": ["Ejpinm0YQO", "DRVK32tz60", "js2WWRqzoi"],
+      "linkedNodes": {}
+    },
+    "Ejpinm0YQO": {
+      "type": { "resolvedName": "Select" },
+      "isCanvas": false,
+      "props": {
+        "fieldId": "discType",
+        "label": "Disc Type",
+        "apiParamSourceNames": "",
+        "dependentFieldNames": "workFlow",
+        "apiConfig": {
+          "requestConfig": { "url": "/api/discrepancytypes" },
+          "responseConfig": {
+            "response": { "key": "data" },
+            "meta": { "key": "hasMore" }
+          }
+        },
+        "selectOptionLabelMapping": "discType",
+        "selectOptionValueMapping": "discType",
+        "selectOptionMapping": "discType",
+        "id": "Ejpinm0YQO"
+      },
+      "displayName": "Select",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "DRVK32tz60": {
+      "type": { "resolvedName": "Select" },
+      "isCanvas": false,
+      "props": {
+        "fieldId": "workFlow",
+        "label": "Work Flow",
+        "apiParamSourceNames": "@UDVUserFieldValues",
+        "dependentFieldNames": "",
+        "apiConfig": {
+          "requestConfig": {
+            "url": "/api/discrepancytypes/:discType/workflows"
+          },
+          "responseConfig": {
+            "response": { "key": "data" },
+            "meta": { "key": "hasMore" }
+          }
+        },
+        "selectOptionLabelMapping": "discWorkFlow",
+        "selectOptionValueMapping": "discWorkFlow",
+        "selectOptionMapping": "discWorkFlow",
+        "id": "DRVK32tz60"
+      },
+      "displayName": "Select",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "js2WWRqzoi": {
+      "type": { "resolvedName": "Select" },
+      "isCanvas": false,
+      "props": {
+        "fieldId": "department_id",
+        "label": "Department",
+        "apiParamSourceNames": "@TOOLSCOPE",
+        "dependentFieldNames": "",
+        "apiConfig": {
+          "requestConfig": {
+            "url": "/api/operationView/locations/:workLocationId/departments",
+            "params": { "assignedTo": "All", "index": 0, "limit": 50 }
+          },
+          "responseConfig": {
+            "response": { "key": "data.summaryCountList" },
+            "meta": { "key": "hasMore" }
+          }
+        },
+        "selectOptionLabelMapping": "departmentName",
+        "selectOptionValueMapping": "departmentId"
+      },
+      "displayName": "Select",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.dispatch-actions-area {
+  display: flex;
+  flex-direction: row;
+  .dispatch-actions-control {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #ccc;
+    background-color: rgb(255, 111, 0);
+    color: #fff;
+  }
+}

@@ -1,0 +1,32 @@
+.grid-view {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  flex-grow: 1;
+  .grid-display-area {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 1;
+    .main-grid-area {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      overflow: auto;
+      border-bottom: 1px solid #ccc;
+    }
+    .tab-grid-area {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      flex-shrink: 0;
+      height: 300px;
+    }
+  }
+  .tabs-list {
+    display: flex;
+    border-top: 1px solid #ccc;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

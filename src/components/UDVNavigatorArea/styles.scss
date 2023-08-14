@@ -1,0 +1,18 @@
+.udv-navigator-area {
+  .udv-navigator-controls {
+    display: flex;
+    flex-direction: row;
+    .udv-navigator-button {
+      &:hover {
+        color: rgb(255, 111, 0);
+      }
+    }
+  }
+  .udv-info {
+    display: flex;
+    flex-direction: row;
+    .udv-select {
+      width: 400px;
+    }
+  }
+}

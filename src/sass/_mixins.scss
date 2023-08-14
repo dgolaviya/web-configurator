@@ -1,0 +1,93 @@
+@mixin generate($prefix, $properties) {
+  // List of sizes to generate for each
+  $sizes: (0.5, 1, 1.5, 2, 2.5, 3);
+  // Spacing to multiply the sizes by
+  $spacing: 1rem;
+
+  // Loop through all of the sizes(we use @for rather than @each, as we want access to the index)
+  @for $i from 1 through length($sizes) {
+    // Get the size for the current index
+    $size: nth($sizes, $i);
+
+    // Create the rule
+    .#{$prefix}-#{$size * 10} {
+      @each $property in $properties {
+        #{$property}: $spacing * $size;
+      }
+    }
+  }
+}
+
+@mixin margin-padding-helpers() {
+  $rules: (
+    ("m", ("margin")),
+    ("mx", ("margin-left", "margin-right")),
+    ("my", ("margin-top", "margin-bottom")),
+    ("ml", ("margin-left")),
+    ("mt", ("margin-top")),
+    ("mb", ("margin-bottom")),
+    ("mr", ("margin-right")),
+    ("p", ("padding")),
+    ("px", ("padding-left", "padding-right")),
+    ("py", ("padding-top", "padding-bottom")),
+    ("pl", ("padding-left")),
+    ("pt", ("padding-top")),
+    ("pb", ("padding-bottom")),
+    ("pr", ("padding-right"))
+  );
+
+  @each $item in $rules {
+    @include generate(nth($item, 1), nth($item, 2));
+  }
+}
+
+@mixin abscenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//Media Query Manager
+/* 
+  Max width media query:
+  
+  0 - 600px : Mobile phone
+  600px - 900px : Tablet Portrait
+  900px - 1200px: Tablet Landscape
+  [1200px - 1800px] : Normal desktop layout
+  
+  1800px+ : It is a big screen layout where we need to use min-width media query
+  */
+
+/*
+   Media query breakpoint description
+   
+   phone: for mobile devices
+   tab-prt: for tablet portrait mode
+   tab-land for tablet landscape mode
+   big-desktop: for big desktop mode
+  */
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 1800px) {
+      @content;
+    }
+  }
+}

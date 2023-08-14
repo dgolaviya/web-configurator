@@ -1,0 +1,45 @@
+{
+  "udvId": "MFI_4",
+  "udvDef": {
+    "ROOT": {
+      "type": { "resolvedName": "Container" },
+      "isCanvas": true,
+      "props": {
+        "width": "100%",
+        "height": "600px",
+        "flex": "none",
+        "flexDirection": "column",
+        "alignItems": "none",
+        "justifyContent": "none",
+        "border": "1px solid #ccc"
+      },
+      "displayName": "Container",
+      "custom": {},
+      "hidden": false,
+      "nodes": ["2cLY6-hESC", "poD6XRFcbs"],
+      "linkedNodes": {}
+    },
+    "2cLY6-hESC": {
+      "type": { "resolvedName": "Button" },
+      "isCanvas": false,
+      "props": { "text": "Initial Button" },
+      "displayName": "Button",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "poD6XRFcbs": {
+      "type": { "resolvedName": "Button" },
+      "isCanvas": false,
+      "props": { "text": "Initial Button" },
+      "displayName": "Button",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    }
+  }
+}

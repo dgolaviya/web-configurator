@@ -1,0 +1,147 @@
+{
+  "udvId": "MFI_1",
+  "udvDef": {
+    "ROOT": {
+      "type": { "resolvedName": "Container" },
+      "isCanvas": true,
+      "props": {
+        "width": "100%",
+        "height": "600px",
+        "flex": "none",
+        "flexDirection": "row",
+        "alignItems": "none",
+        "justifyContent": "none",
+        "border": "1px solid #ccc"
+      },
+      "displayName": "Container",
+      "custom": {},
+      "hidden": false,
+      "nodes": ["JLMXi1RLom", "cReaFGkIYH", "UwwPWlEz4f", "THigSg5Kbu"],
+      "linkedNodes": {}
+    },
+    "THigSg5Kbu": {
+      "type": { "resolvedName": "DataGrid" },
+      "isCanvas": false,
+      "props": {
+        "apiSourceName": "center",
+        "columnDefs": [
+          {
+            "field": "workCenterName",
+            "headerName": "Work Center",
+            "resizable": true,
+            "sortable": true,
+            "hide": false
+          },
+          {
+            "field": "totalOperation",
+            "headerName": "Total Operation",
+            "resizable": true,
+            "sortable": true,
+            "hide": false
+          },
+          {
+            "field": "stopCount",
+            "headerName": "Stop Count",
+            "resizable": false,
+            "sortable": true,
+            "hide": false
+          }
+        ],
+        "width": "50%",
+        "height": "600px"
+      },
+      "displayName": "DataGrid",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "JLMXi1RLom": {
+      "type": { "resolvedName": "DataGrid" },
+      "isCanvas": false,
+      "props": {
+        "apiSourceName": "department",
+        "columnDefs": [
+          {
+            "field": "departmentName",
+            "headerName": "Work Department",
+            "resizable": true,
+            "sortable": true,
+            "hide": false
+          },
+          {
+            "field": "operationCount",
+            "headerName": "Total Operation",
+            "resizable": true,
+            "sortable": true,
+            "hide": false
+          },
+          {
+            "field": "centerCount",
+            "headerName": "Total Centers",
+            "resizable": false,
+            "sortable": true,
+            "hide": false
+          }
+        ],
+        "width": "50%",
+        "height": "600px"
+      },
+      "displayName": "DataGrid",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "cReaFGkIYH": {
+      "type": { "resolvedName": "APISource" },
+      "isCanvas": false,
+      "props": {
+        "apiSourceName": "department",
+        "apiParamSourceNames": "@TOOLSCOPE",
+        "apiConfig": {
+          "requestConfig": {
+            "url": "/api/operationView/locations/:workLocationId/departments",
+            "params": { "assignedTo": "All", "index": 0, "limit": 50 }
+          },
+          "responseConfig": {
+            "response": { "key": "data.summaryCountList" },
+            "meta": { "key": "hasMore" }
+          }
+        }
+      },
+      "displayName": "APISource",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "UwwPWlEz4f": {
+      "type": { "resolvedName": "APISource" },
+      "isCanvas": false,
+      "props": {
+        "apiSourceName": "center",
+        "apiParamSourceNames": "@TOOLSCOPE, department",
+        "apiConfig": {
+          "requestConfig": {
+            "url": "/api/operationView/locations/:workLocationId/departments/:departmentId/centers",
+            "params": { "assignedTo": "All", "index": 0, "limit": 50 }
+          },
+          "responseConfig": {
+            "response": { "key": "data.summaryCountList" },
+            "meta": { "key": "hasMore" }
+          }
+        }
+      },
+      "displayName": "APISource",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    }
+  }
+}

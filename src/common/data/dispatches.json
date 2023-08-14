@@ -1,0 +1,211 @@
+[
+  {
+    "groupId": "808443821654669400001690621201296",
+    "dispatchId": "95785169262458060001690798340549",
+    "dispatchName": "Work Loc, Dept, Center",
+    "apiConfig": {
+      "requestConfig": {
+        "url": "/api/operationView/locations",
+        "params": {
+          "assignedTo": "All",
+          "index": 0,
+          "limit": 50
+        }
+      },
+      "responseConfig": {
+        "response": {
+          "key": "data"
+        },
+        "meta": {
+          "key": "hasMore"
+        }
+      }
+    },
+    "columnDefs": [
+      {
+        "field": "workLocationName",
+        "headerName": "Work Location",
+        "resizable": true,
+        "sortable": true,
+        "hide": false
+      },
+      {
+        "field": "totalOperation",
+        "headerName": "Total Operation",
+        "resizable": true,
+        "sortable": true,
+        "hide": false
+      },
+      {
+        "field": "totalWorkCenter",
+        "headerName": "Total Centers",
+        "resizable": false,
+        "sortable": true,
+        "hide": false
+      },
+      {
+        "field": "totalWorkDepartment",
+        "headerName": "Total Departments",
+        "resizable": false,
+        "sortable": false,
+        "hide": false
+      }
+    ],
+    "tabDefs": [
+      {
+        "id": "part-serial-lot",
+        "udvId": "MFI_1",
+        "name": "Part Serial/Lot",
+        "hide": false
+      },
+      {
+        "id": "related-documents",
+        "udvId": "MFI_2",
+        "name": "Related Documents",
+        "hide": false
+      },
+      {
+        "id": "attribute-override",
+        "udvId": "MFI_3",
+        "name": "Attribute Override",
+        "hide": false
+      },
+      {
+        "id": "holds",
+        "udvId": "MFI_4",
+        "name": "Holds",
+        "hide": false
+      },
+      {
+        "id": "alternate-parts",
+        "udvId": "MFI_4",
+        "name": "Alternate Parts",
+        "hide": false
+      },
+      {
+        "id": "authorized-suppliers",
+        "udvId": "MFI_4",
+        "name": "Authorized Suppliers/Locations",
+        "hide": false
+      },
+      {
+        "id": "planned-actions",
+        "udvId": "MFI_4",
+        "name": "Planned Actions",
+        "hide": false
+      },
+      {
+        "id": "changes-associated",
+        "udvId": "MFI_4",
+        "name": "Changes Associated",
+        "hide": false
+      },
+      {
+        "id": "used-std-oper",
+        "udvId": "MFI_4",
+        "name": "Used In Standard Operations",
+        "hide": false
+      }
+    ]
+  },
+  {
+    "groupId": "426577141003423800001690621425815",
+    "dispatchId": "440276223436587800001690808130432",
+    "dispatchName": "Operations",
+    "apiConfig": {
+      "requestConfig": {
+        "url": "/api/operationView/locations/orphanOperations",
+        "params": {
+          "assignedTo": "All",
+          "operStatus": "OPEN",
+          "sortType": "asc",
+          "sortBy": "DueDate",
+          "index": 0,
+          "limit": 50
+        }
+      },
+      "responseConfig": {
+        "response": {
+          "key": "data.operationList"
+        },
+        "meta": {
+          "key": "hasMore"
+        }
+      }
+    },
+    "columnDefs": [
+      {
+        "field": "orderNo",
+        "headerName": "Order Number",
+        "resizable": true,
+        "hide": false
+      },
+      {
+        "field": "operNo",
+        "headerName": "Operation No",
+        "hide": false
+      },
+      {
+        "field": "partNo",
+        "headerName": "Part Number",
+        "hide": false
+      },
+      {
+        "field": "partChg",
+        "headerName": "Part Rev",
+        "hide": false
+      },
+      {
+        "field": "operStatus",
+        "headerName": "Operation Status",
+        "hide": false
+      },
+      {
+        "field": "orderControlType",
+        "headerName": "Order Control",
+        "hide": false
+      },
+      {
+        "field": "orderStatus",
+        "headerName": "Order Status",
+        "hide": false
+      },
+      {
+        "field": "partTitle",
+        "headerName": "Part Title",
+        "hide": false
+      },
+      {
+        "field": "completeOperQty",
+        "headerName": "Complete Qty",
+        "hide": false
+      }
+    ],
+    "tabDefs": [
+      {
+        "id": "discrepancies",
+        "udvId": "MFI_1",
+        "name": "Discrepancies",
+        "hide": false
+      },
+      {
+        "id": "parts",
+        "udvId": "MFI_2",
+        "name": "Parts",
+        "hide": false
+      },
+      {
+        "id": "serial-lot",
+        "udvId": "MFI_3",
+        "name": "Serials/Lot",
+        "hide": false
+      },
+      {
+        "id": "holds",
+        "udvId": "MFI_4",
+        "name": "Holds",
+        "hide": false
+      }
+    ]
+  }
+]

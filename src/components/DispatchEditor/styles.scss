@@ -1,0 +1,48 @@
+.dispatch-editor {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  flex-grow: 1;
+  .dispatch-groups-area {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    flex-shrink: 0;
+    border-right: 1px solid #ccc;
+    .dispatch-groups-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .dispatch-group-row {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+      justify-content: space-between;
+      &.highlight-header {
+        border-bottom: 3px solid rgb(255, 111, 0);
+      }
+    }
+  }
+  .dipatch-configuration-area {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    .dispatch-preview-area {
+      position: relative;
+      display: flex;
+      flex-grow: 1;
+    }
+    .page-settings-list {
+      display: flex;
+      flex-shrink: 0;
+      background-color: #000;
+      flex-direction: column;
+      width: 40px;
+    }
+  }
+}

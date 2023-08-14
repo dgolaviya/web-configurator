@@ -1,0 +1,22 @@
+[
+  {
+    "groupId": "808443821654669400001690621201296",
+    "groupName": "Process Planning"
+  },
+  {
+    "groupId": "785772199972192300001690621210224",
+    "groupName": "Inspection Planning"
+  },
+  {
+    "groupId": "426577141003423800001690621425815",
+    "groupName": "Production Control"
+  },
+  {
+    "groupId": "488787990640180700001690621439520",
+    "groupName": "Discrepancies"
+  },
+  {
+    "groupId": "804560168592976600001690621447225",
+    "groupName": "Operations"
+  }
+]

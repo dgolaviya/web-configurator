@@ -1,0 +1,36 @@
+.grid-container {
+  .grid-setting-panel-container {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  .tool-bar-container {
+    width: 30px;
+    padding: 20px 0;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    align-items: center;
+    .tool-bar-button {
+      writing-mode: vertical-lr;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      padding: 20px 0;
+      font-size: 13px;
+      .button-icon {
+        padding-bottom: 3px;
+      }
+      &.highlight-button {
+        border-left: 3px solid rgb(255, 111, 0);
+      }
+    }
+  }
+}

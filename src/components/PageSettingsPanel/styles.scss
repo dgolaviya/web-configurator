@@ -1,0 +1,11 @@
+.page-settings-panel {
+  position: absolute;
+  width: 500px;
+  z-index: 1;
+  right: 0;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
