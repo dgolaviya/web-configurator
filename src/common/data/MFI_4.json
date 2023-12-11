@@ -2,39 +2,151 @@
   "udvId": "MFI_4",
   "udvDef": {
     "ROOT": {
-      "type": { "resolvedName": "Container" },
+      "type": { "resolvedName": "InputUDVContainer" },
       "isCanvas": true,
       "props": {
         "width": "100%",
-        "height": "600px",
+        "height": "800px",
         "flex": "none",
+        "apiConfig": {
+          "requestConfig": {
+            "url": "/api/operationView/locations",
+            "params": { "assignedTo": "All", "index": 0, "limit": 50 }
+          },
+          "responseConfig": {
+            "response": { "key": "data" },
+            "meta": { "key": "hasMore" }
+          }
+        },
         "flexDirection": "column",
         "alignItems": "none",
-        "justifyContent": "none",
+        "justifyContent": "space-between",
         "border": "1px solid #ccc"
       },
-      "displayName": "Container",
+      "displayName": "InputUDVContainer",
       "custom": {},
       "hidden": false,
-      "nodes": ["2cLY6-hESC", "poD6XRFcbs"],
+      "nodes": [
+        "RGSH0S0kKl",
+        "60Dz-bTN7Z",
+        "cpEnqrR4Ml",
+        "Ejpinm0YQO",
+        "DRVK32tz60",
+        "js2WWRqzoi"
+      ],
       "linkedNodes": {}
     },
-    "2cLY6-hESC": {
-      "type": { "resolvedName": "Button" },
+    "RGSH0S0kKl": {
+      "type": { "resolvedName": "Text" },
       "isCanvas": false,
-      "props": { "text": "Initial Button" },
-      "displayName": "Button",
+      "props": { "fieldId": "orderNo", "label": "Work Order" },
+      "displayName": "Text",
       "custom": {},
       "parent": "ROOT",
       "hidden": false,
       "nodes": [],
       "linkedNodes": {}
     },
-    "poD6XRFcbs": {
-      "type": { "resolvedName": "Button" },
+    "60Dz-bTN7Z": {
+      "type": { "resolvedName": "Text" },
       "isCanvas": false,
-      "props": { "text": "Initial Button" },
-      "displayName": "Button",
+      "props": { "fieldId": "partNo", "label": "Part Number" },
+      "displayName": "Text",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "cpEnqrR4Ml": {
+      "type": { "resolvedName": "Text" },
+      "isCanvas": false,
+      "props": { "fieldId": "partChange", "label": "Rev" },
+      "displayName": "Text",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "Ejpinm0YQO": {
+      "type": { "resolvedName": "Select" },
+      "isCanvas": false,
+      "props": {
+        "fieldId": "discType",
+        "label": "Disc Type",
+        "apiParamSourceNames": "",
+        "dependentFieldNames": "workFlow",
+        "apiConfig": {
+          "requestConfig": { "url": "/api/discrepancytypes" },
+          "responseConfig": {
+            "response": { "key": "data" },
+            "meta": { "key": "hasMore" }
+          }
+        },
+        "selectOptionLabelMapping": "discType",
+        "selectOptionValueMapping": "discType",
+        "selectOptionMapping": "discType",
+        "id": "Ejpinm0YQO"
+      },
+      "displayName": "Select",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "DRVK32tz60": {
+      "type": { "resolvedName": "Select" },
+      "isCanvas": false,
+      "props": {
+        "fieldId": "workFlow",
+        "label": "Work Flow",
+        "apiParamSourceNames": "@UDVUserFieldValues",
+        "dependentFieldNames": "",
+        "apiConfig": {
+          "requestConfig": {
+            "url": "/api/discrepancytypes/:discType/workflows"
+          },
+          "responseConfig": {
+            "response": { "key": "data" },
+            "meta": { "key": "hasMore" }
+          }
+        },
+        "selectOptionLabelMapping": "discWorkFlow",
+        "selectOptionValueMapping": "discWorkFlow",
+        "selectOptionMapping": "discWorkFlow",
+        "id": "DRVK32tz60"
+      },
+      "displayName": "Select",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "js2WWRqzoi": {
+      "type": { "resolvedName": "Select" },
+      "isCanvas": false,
+      "props": {
+        "fieldId": "department_id",
+        "label": "Department",
+        "apiParamSourceNames": "@TOOLSCOPE",
+        "dependentFieldNames": "",
+        "apiConfig": {
+          "requestConfig": {
+            "url": "/api/operationView/locations/:workLocationId/departments",
+            "params": { "assignedTo": "All", "index": 0, "limit": 50 }
+          },
+          "responseConfig": {
+            "response": { "key": "data.summaryCountList" },
+            "meta": { "key": "hasMore" }
+          }
+        },
+        "selectOptionLabelMapping": "departmentName",
+        "selectOptionValueMapping": "departmentId"
+      },
+      "displayName": "Select",
       "custom": {},
       "parent": "ROOT",
       "hidden": false,

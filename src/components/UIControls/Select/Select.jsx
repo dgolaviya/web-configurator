@@ -233,6 +233,12 @@ const Select = ({
   }, []);
 
   useEffect(() => {
+    console.log(
+      apiParamSourceNames,
+      apiConfig,
+      toggleRefreshSelect,
+      "execute select"
+    );
     if (
       isValidAPIConfiguration(apiConfig) &&
       Object.keys(apiConfig)?.length > 0

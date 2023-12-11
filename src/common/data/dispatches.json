@@ -24,7 +24,7 @@
     "columnDefs": [
       {
         "field": "workLocationName",
-        "headerName": "Work Location",
+        "headerName": "Location Name",
         "resizable": true,
         "sortable": true,
         "hide": false
@@ -114,7 +114,7 @@
     "dispatchName": "Operations",
     "apiConfig": {
       "requestConfig": {
-        "url": "/api/operationView/locations/orphanOperations",
+        "url": "/operations",
         "params": {
           "assignedTo": "All",
           "operStatus": "OPEN",

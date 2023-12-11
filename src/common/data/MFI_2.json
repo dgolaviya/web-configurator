@@ -16,7 +16,7 @@
       "displayName": "Container",
       "custom": {},
       "hidden": false,
-      "nodes": ["Ejpinm0YQO", "DRVK32tz60", "js2WWRqzoi"],
+      "nodes": ["Ejpinm0YQO", "DRVK32tz60", "js2WWRqzoi", "v4gEJUudz5"],
       "linkedNodes": {}
     },
     "Ejpinm0YQO": {
@@ -95,6 +95,34 @@
         },
         "selectOptionLabelMapping": "departmentName",
         "selectOptionValueMapping": "departmentId"
+      },
+      "displayName": "Select",
+      "custom": {},
+      "parent": "ROOT",
+      "hidden": false,
+      "nodes": [],
+      "linkedNodes": {}
+    },
+    "v4gEJUudz5": {
+      "type": { "resolvedName": "Select" },
+      "isCanvas": false,
+      "props": {
+        "fieldId": "processType",
+        "label": "Processes",
+        "apiParamSourceNames": "",
+        "dependentFieldNames": "",
+        "apiConfig": {
+          "requestConfig": {
+            "url": "/api/admin/planningOperations/processTypes?orderId=MFI_47E60A66D005D63CB3C14979CBBB5217&operKey=17335",
+            "params": {}
+          },
+          "responseConfig": {
+            "response": { "key": "data" },
+            "meta": { "key": "hasMore" }
+          }
+        },
+        "selectOptionLabelMapping": "processType",
+        "selectOptionValueMapping": "processType"
       },
       "displayName": "Select",
       "custom": {},

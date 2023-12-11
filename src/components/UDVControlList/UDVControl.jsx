@@ -7,7 +7,6 @@ import {
   Container,
   DataGrid,
   APISource,
-  APITransaction,
   Select,
 } from "../UIControls";
 
@@ -32,9 +31,6 @@ const uiControlsMapping = {
   apiSource: {
     component: APISource,
   },
-  apiTransaction: {
-    component: APITransaction,
-  },
   select: {
     component: Select,
   },
@@ -53,9 +49,9 @@ const UDVControl = ({ name, id }) => {
     >
       <FontAwesomeIcon
         icon="fa-solid fa-arrows-up-down-left-right"
-        className="fs-16 pr-10"
+        className="fs-14 pr-10"
       />
-      <span className="fs-16">{name}</span>
+      <span className="fs-14">{name}</span>
     </div>
   );
 };

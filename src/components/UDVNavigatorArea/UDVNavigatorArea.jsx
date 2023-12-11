@@ -7,6 +7,7 @@ import DialogBox from "../DialogBox";
 import MFI_1 from "../../common/data/MFI_1.json";
 import MFI_2 from "../../common/data/MFI_2.json";
 import MFI_3 from "../../common/data/MFI_3.json";
+import MFI_4 from "../../common/data/MFI_4.json";
 import { uiManagerReducer, useUIManagerContext } from "../../common/context";
 import "./styles.scss";
 
@@ -22,6 +23,10 @@ const UDVOptions = [
   {
     label: "MFI_3",
     value: MFI_3,
+  },
+  {
+    label: "MFI_4",
+    value: MFI_4,
   },
 ];
 
@@ -43,6 +48,7 @@ const UDVNavigatorArea = ({ toolInstanceId, toolId, udvId }) => {
       MFI_1,
       MFI_2,
       MFI_3,
+      MFI_4,
     };
     if (udvId) {
       const udv = udvDefs[udvId];

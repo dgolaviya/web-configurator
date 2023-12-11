@@ -26,20 +26,23 @@ const UIManager = () => {
     selectedToolItem;
   const RenderTool = uiManagerToolMap[toolId];
   return (
-    <div className="ui-manager">
-      <div className="tools-list-container">
-        <ToolList selectedToolInstanceId={toolInstanceId} />
-      </div>
-      <div className="tool-work-area">
-        {RenderTool && (
-          <RenderTool
-            key={toolInstanceId}
-            udvId={udvId}
-            selectedDispatchInfo={selectedDispatchInfo}
-            toolId={toolId}
-            toolInstanceId={toolInstanceId}
-          />
-        )}
+    <div className="ui-manager-app">
+      <div className="ui-manager-header fs-18 px-10">UI Manager</div>
+      <div className="ui-manager">
+        <div className="tools-list-container">
+          <ToolList selectedToolInstanceId={toolInstanceId} />
+        </div>
+        <div className="tool-work-area">
+          {RenderTool && (
+            <RenderTool
+              key={toolInstanceId}
+              udvId={udvId}
+              selectedDispatchInfo={selectedDispatchInfo}
+              toolId={toolId}
+              toolInstanceId={toolInstanceId}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

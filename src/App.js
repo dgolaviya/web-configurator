@@ -6,7 +6,7 @@ import "./app.scss";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/ui-manager",
     element: <WebConfigurator />,
   },
   {

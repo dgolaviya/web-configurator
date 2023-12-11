@@ -1,7 +1,11 @@
 import axios from "axios";
 
+const TOKEN =
+  "Bearer eyJjbGllbnQtaWQiOiJTT0xVTUlOQS1BRE1JTi1BUEkiLCJhbGciOiJSUzI1NiIsImtpZCI6ImFIUjBjSE02THk5MmJDMWxlR1ZqIn0.eyJzdWIiOiJTVVBFUlVTRVIiLCJhdWQiOiJhcGkiLCJuYmYiOjE3MDA3MjQxNDUsInNjb3BlIjpbIlNPTFVNSU5BIl0sImlzcyI6Imh0dHBzOlwvXC92bC1leGVjdWkwMS5pYmFzZXQuY29tIiwiZXhwIjoxNzAwNzI3NzQ1LCJpYXQiOjE3MDA3MjQxNDV9.jPjbjqICbObwhoMIokKFL1Au28CW8_HB6hFflZvtO2G6JA13AlG2xJROKKzj-cR7svxnojtR_--6bf3lNi86oMPDN30CakDZwJ1dgpcvGoD6dVaRKt0wUSoHeEYqMs2SS15m3u7CcBVmqEPiS50iH4SS7RKXUrD16yKwORBBiyA5Ep-xZKIjGigLvJCIMqpuaJb3E82EiNXSirgp-I5U9f256C4uHbysh4o6tMl8wNKPIQzYuYxym9dfIdp4KYWKtCG4OgJaM8U8IR5-OXkvJ1_2RdoBFQ6sHE4jeh9ydeeeIIaUdmLzNuGmSaU0dCoSq9g_5OYnxnobJcvfuHfMnw";
+axios.defaults.headers.common["Authorization"] = TOKEN;
+
 const instance = axios.create({
-  baseURL: "https://nature-app-api.onrender.com/api/v1",
+  baseURL: "http://localhost",
 });
 
 export default instance;

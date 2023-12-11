@@ -32,10 +32,6 @@ const controlList = [
     id: "apiSource",
   },
   {
-    name: "API Transaction",
-    id: "apiTransaction",
-  },
-  {
     name: "Select",
     id: "select",
   },
@@ -43,7 +39,7 @@ const controlList = [
 
 const UDVEditor = ({ toolInstanceId, toolId, udvId }) => (
   <div className="udv-editor">
-    <Editor resolver={uiControls}>
+    <Editor key={udvId} resolver={uiControls}>
       <DispatchProvider>
         <UDVProvider>
           <div className="udv-navigator-area">
@@ -59,7 +55,7 @@ const UDVEditor = ({ toolInstanceId, toolId, udvId }) => (
             </div>
             <div className="udv-layout-builder">
               <Frame>
-                <Element is={uiControls.Container} canvas />
+                <Element is={uiControls.InputUDVContainer} canvas />
               </Frame>
             </div>
             <div className="udv-property-editor">

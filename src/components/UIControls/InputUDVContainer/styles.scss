@@ -1,0 +1,12 @@
+.input-udv-transaction-row {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid #ccc;
+  justify-content: center;
+  height: 3rem;
+}
+
+.input-udv-fields-container {
+  display: flex;
+  flex-direction: column;
+}
